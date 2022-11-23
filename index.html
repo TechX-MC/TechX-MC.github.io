@@ -198,17 +198,17 @@ function fallbackCopyTextToClipboard(text) {
       <h1 class="text-xl text-center inline-block p-1 rounded">TechX</h1>
       <div class="flex flex-none content-center justify-center items-center flex-col bg-white/35 backdrop-blur rounded p-2">
         <div>
-          <span x-type="link" href="UltimMC.exe">Download UltimMC</span>
-          <span class="px-1">|</span>
-          <span x-type="link" onclick="copyTextToClipboard(location.href + '/TechX.zip')"><p>
-            Copy instance URL
-            (for MultiMC, UltimMC, and forks, can be imported via new instance > import from zip)
-          </p></span>
-          <span class="px-1">|</span>
-          <span x-type="link" href="TechX.zip"><p>
-            Download instance zip
-            (for MultiMC, UltimMC, forks, or manual installation)
-          </p></span>
+          <div>
+            <span x-type="button" href="UltimMC.exe">Download UltimMC</span>
+          </div>
+          <div>
+            <span x-type="button" onclick="copyTextToClipboard(location.href + '/TechX.zip')">Copy instance URL</span>
+            <p>(for MultiMC, UltimMC, and forks, can be imported via new instance > import from zip)</p>
+          </div>
+          <div>
+            <span x-type="button" href="TechX.zip">Download instance zip</span>
+            <p>(for MultiMC, UltimMC, forks, or manual installation)</p>
+          </div>
         </div>
       </div>
       <br>
