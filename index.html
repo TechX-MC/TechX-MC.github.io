@@ -6,7 +6,7 @@
 <script src="https://teknixstuff.github.io/AIOstacks/frontend/TVSP/autostyls.js"></script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2162389845037702" crossorigin="anonymous"></script>
 <script id="_carbonads_projs" type="text/javascript" src="https://srv.carbonads.net/ads/CK7DPKQU.json?segment=placement:"></script>
-<style>
+<style type="text/tailwindscss">
 .carbon-poweredby {display: none;}
 .carbon-wrap {
   max-width: 360px;
@@ -109,6 +109,51 @@
 @keyframes fadeIn {
     0% { opacity:0; }
     100% { opacity:100%; }
+}
+
+[xn-type|="button"] {
+  --main-color: hsl(195, 100%, 50%);
+  --dark-color: hsl(195, 100%, 25%);
+  --light-color: hsl(195, 100%, 65%);
+  transition: background-color 0.5s;
+  display: inline-block;
+  color: white;
+  background-color: var(--main-color);
+  outline: none;
+  border: 1px solid LightGray;
+  border-radius: 5px;
+  text-align: center;
+  padding: 0px 5px;
+  margin: 5px;
+  height: 1.5em;
+  line-height: 1.5em;
+  &:hover {
+    background-color: var(--light-color);
+  }
+  &:active {
+    background-color: var(--dark-color);
+  }
+  &[xn-extype~="alt"] {
+    --main-color: hsl(0, 0%, 95%);
+    --dark-color: hsl(0, 0%, 90%);
+    --light-color: hsl(0, 0%, 98%);
+    color: black;
+  }
+  &[xn-extype~="red"] {
+    --main-color: hsl(0, 100%, 50%);
+    --dark-color: hsl(0, 100%, 25%);
+    --light-color: hsl(0, 100%, 70%);
+    color: white;
+  }
+  &[xn-extype~="green"] {
+    --main-color: hsl(120, 61%, 50%);
+    --dark-color: hsl(120, 61%, 25%);
+    --light-color: hsl(120, 61%, 65%);
+    color: white;
+  }
+  &[xn-extype~="square"] {
+    border-radius: 0px;
+  }
 }
 </style>
 <!-- Config -->
@@ -273,15 +318,15 @@ function fallbackCopyTextToClipboard(text) {
       <h1 class="text-xl text-center inline-block p-1 rounded">TechX</h1>
       <div class="flex flex-none content-center justify-center items-center flex-col bg-white/35 backdrop-blur rounded p-2">
         <div>
-            <span x-type="button" x-extype="green" onclick="copyTextToClipboard(location.href + '/TechX.zip')">
+            <span xn-type="button" xn-extype="green" onclick="copyTextToClipboard(location.href + 'TechX.zip')">
               Copy instance URL
               <span class="help-tip">?<p>
                 Can be imported via new instance > import from zip.
                 Compatible with MultiMC, UltimMC, and forks.
               </p></span>
             </span>
-            <span x-type="button" x-extype="alt" href="UltimMC.exe">Download UltimMC</span>
-            <span x-type="button" x-extype="alt" href="TechX.zip">
+            <span xn-type="button" xn-extype="alt" href="UltimMC.exe">Download UltimMC</span>
+            <span xn-type="button" xn-extype="alt" href="TechX.zip">
               Download instance zip
               <span class="help-tip">?<p>
                 For MultiMC, UltimMC, forks, or manual installation.
