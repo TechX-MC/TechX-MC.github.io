@@ -37,6 +37,7 @@
 }
 
 .help-tip{
+    position: absolute;
     text-align: center;
     background-color: #BCDBEA;
     border-radius: 50%;
@@ -45,10 +46,6 @@
     font-size: 14px;
     line-height: 26px;
     cursor: default;
-}
-
-.help-tip:before{
-    content:'?';
     font-weight: bold;
     color:#fff;
 }
@@ -280,13 +277,13 @@ function fallbackCopyTextToClipboard(text) {
       <div class="flex flex-none content-center justify-center items-center flex-col bg-white/35 backdrop-blur rounded p-2">
         <div>
             <span x-type="button" x-extype="green" onclick="copyTextToClipboard(location.href + '/TechX.zip')">Copy instance URL</span>
-            <span class="help-tip"><p>
+            <span class="help-tip">?<p>
               Can be imported via new instance > import from zip.
               Compatible with MultiMC, UltimMC, and forks.
             </p></span>
             <span x-type="button" x-extype="alt" href="UltimMC.exe">Download UltimMC</span>
             <span x-type="button" x-extype="alt" href="TechX.zip">Download instance zip</span>
-            <span class="help-tip"><p>
+            <span class="help-tip">?<p>
               For MultiMC, UltimMC, forks, or manual installation.
             </p></span>
           </div>
