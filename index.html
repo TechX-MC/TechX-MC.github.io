@@ -69,7 +69,7 @@
     color: #FFF;
     font-size: 13px;
     line-height: 1.4;
-    z-index: 100;
+    z-index: 999;
 }
 
 .help-tip p:before{ /* The pointer of the tooltip */
@@ -273,16 +273,16 @@ function fallbackCopyTextToClipboard(text) {
       <h1 class="text-xl text-center inline-block p-1 rounded">TechX</h1>
       <div class="flex flex-none content-center justify-center items-center flex-col bg-white/35 backdrop-blur rounded p-2">
         <div>
-            <span x-type="button" x-extype="green">
-              <span onclick="copyTextToClipboard(location.href + '/TechX.zip')">Copy instance URL</span>
+            <span x-type="button" x-extype="green" onclick="copyTextToClipboard(location.href + '/TechX.zip')">
+              Copy instance URL
               <span class="help-tip">?<p>
                 Can be imported via new instance > import from zip.
                 Compatible with MultiMC, UltimMC, and forks.
               </p></span>
             </span>
             <span x-type="button" x-extype="alt" href="UltimMC.exe">Download UltimMC</span>
-            <span x-type="button" x-extype="alt">
-              <span href="TechX.zip">Download instance zip</span>
+            <span x-type="button" x-extype="alt" href="TechX.zip">
+              Download instance zip
               <span class="help-tip">?<p>
                 For MultiMC, UltimMC, forks, or manual installation.
               </p></span>
@@ -291,7 +291,7 @@ function fallbackCopyTextToClipboard(text) {
         </div>
       </div>
       <br>
-      <div class="bg-white/35 backdrop-blur flex flex-none content-center justify-center items-center flex-col p-2 rounded">
+      <div class="bg-white/35 backdrop-blur flex flex-none content-center justify-center items-center flex-col p-2 rounded -z-50">
         <div>Developer:</div>
         <div>
           <a href="https://teknixstuff.github.io" class="text-inherit underline">
